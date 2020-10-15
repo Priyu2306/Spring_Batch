@@ -1,10 +1,25 @@
 server:
-    port: 8888
+  port: 9292
+
 spring:
-    application:
-        name: Config-server
+  application:
+    name: File_to_Db_Spring_Batch
+
+  batch:
+    initialize-schema: ALWAYS
+    job:
+      enabled: false
+
+
     cloud:
-        config:
-            server:
-                git:
-                    uri: https://github.com/Priyu2306/config_server.git
+          config:
+            uri: http://Config-server
+
+#  jpa:
+#    generate-ddl: true
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5Dialect
+#    show-sql: true
