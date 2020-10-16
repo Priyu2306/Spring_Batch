@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 
 import lombok.Getter;
 
-@Getter
 @Component
+@Getter
 @RefreshScope
 public class BatchConfiguration {
 
